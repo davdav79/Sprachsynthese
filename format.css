@@ -1,0 +1,116 @@
+  #Kontakt
+  {
+    position:absolute;
+    top:4em;left:2em;
+    margin-left:0em;
+    font: normal 120% Berlin Sans FB;
+    color:#000000;
+  }
+
+  #Links
+  {
+    position:absolute;
+    top:1em;left:3em;
+  }
+
+  #Linie_H1
+  {
+    position:absolute;
+    top:0em;left:1em;
+  }
+
+  #Linie_H2
+  {
+    position:absolute;
+    top:28em;left:1em;
+   }
+
+  #Inhalt_1
+  {
+    position:relative;
+    margin-top:0em;margin-left:0em;
+    background-color:#ffffff;
+  }
+
+  #Inhalt_2
+  {
+    position:relative;
+    background-color:#7A501B;
+
+  }
+
+  #Navigation
+  {
+    position:absolute;
+    top: 10em; left:5em;
+    font: normal 60% Berlin Sans FB;
+   }
+
+
+  #Navigation a:link {
+    font: normal 100% Berlin Sans FB;
+    color:#ffffff;
+  }
+  #Navigation a:visited {
+    font: normal 100% Berlin Sans FB;
+    color:#F5F6CE;
+  }
+  #Navigation a:hover {
+    font: normal 100% Berlin Sans FB;
+    color:#888888;
+  }
+  #Navigation a:active {
+    font: normal 100% Berlin Sans FB;
+    color:#ffffff;
+  }
+
+  a:link {
+    font: normal 100% Berlin Sans FB;
+    color:#7A501B;
+  }
+  a:visited {
+    font: normal 100% Berlin Sans FB;
+    color:#7A501B;
+  }
+  a:hover {
+    font: normal 100% Berlin Sans FB;
+    color:#CC8B3C;
+  }
+  a:active {
+    font: normal 100% Berlin Sans FB;
+    color:#ffff00;
+  }
+
+
+  h1
+  {
+    font: normal 140% Berlin Sans FB;
+    color:#000000;
+    left:5em;
+  }
+
+  h2
+  {
+    font: normal 120% Berlin Sans FB;
+    color:#000000;
+    left:5em;
+  }
+
+  h3
+  {
+    font: normal 110% Berlin Sans FB;
+    color:#000000;
+    left:5em;
+  }
+
+  h
+  {
+    font: normal 100% Berlin Sans FB;
+    color:#F5F6CE;
+  }
+
+  ol
+  {
+    font: normal 100% Berlin Sans FB;
+    color:#F5F6CE;
+  }
