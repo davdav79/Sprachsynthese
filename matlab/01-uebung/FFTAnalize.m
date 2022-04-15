@@ -16,7 +16,7 @@ for index = 1:countOfN
     [spec f] = calculateFFT(signalVec, FS, N);
     subplot(halfCountOfN,2,index)
     plot(f, abs(spec));
-    title(int2str(N) + " ms");
+    title(int2str(N/FS*1000) + " ms");
     ylabel("Â(f)");
     xlabel("f (Hz)");
 end

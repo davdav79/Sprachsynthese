@@ -62,9 +62,9 @@ figure('Name',"Fouriertransformierte")
 FFTAnalize(A_ges, f_a, Nvec)
 
 audiowrite("aufgabe1_output.wav", A_ges, f_a, "BitsPerSample",afl);
-
-[avec aFS] = audioread("stefanA.wav");
-[ivec iFS] = audioread("stefanI.wav");
+%Stefan----------------------------------------------------------------------
+[avec aFS] = audioread("../../wav/Stefan_A.wav");
+[ivec iFS] = audioread("../../wav/Stefan_I.wav");
 
 % Stelle Sprachsignale dar
 figure("Name","Sprachsignale");
@@ -80,5 +80,48 @@ title("I-Sprachsignal");
 figure('Name',"Sprache-Fouriertransformiert A")
 FFTAnalize(avec, aFS, Nvec(1:4));
 figure('Name',"Sprache-Fouriertransformiert I")
-FFTAnalize(ivec, iFS, Nvec);
+FFTAnalize(ivec, iFS, Nvec(1:4));
+
+%Marc----------------------------------------------------------------------
+[avec aFS] = audioread("../../wav/Marc_A.wav");
+[ivec iFS] = audioread("../../wav/Marc_I.wav");
+
+% Stelle Sprachsignale dar
+figure("Name","Sprachsignale");
+subplot(2,1,1);
+plot(avec);
+title("A-Sprachsignal");
+
+subplot(2,1,2);
+plot(ivec);
+title("I-Sprachsignal");
+
+% Berechne und gebe Transformierte Signale aus
+figure('Name',"Sprache-Fouriertransformiert A")
+FFTAnalize(avec, aFS, Nvec(1:4));
+figure('Name',"Sprache-Fouriertransformiert I")
+FFTAnalize(ivec, iFS, Nvec(1:4));
+
+%David----------------------------------------------------------------------
+[avec aFS] = audioread("../../wav/David_A.wav");
+[ivec iFS] = audioread("../../wav/David_I.wav");
+[hvec hFS] = audioread("../../wav/David_H.wav");
+
+% Stelle Sprachsignale dar
+figure("Name","Sprachsignale");
+subplot(2,1,1);
+plot(avec);
+title("A-Sprachsignal");
+
+subplot(2,1,2);
+plot(ivec);
+title("I-Sprachsignal");
+
+% Berechne und gebe Transformierte Signale aus
+figure('Name',"Sprache-Fouriertransformiert A")
+FFTAnalize(avec, aFS, Nvec(1:4));
+figure('Name',"Sprache-Fouriertransformiert I")
+FFTAnalize(ivec, iFS, Nvec(1:4));
+figure('Name',"Sprache-Fouriertransformiert H")
+FFTAnalize(hvec, hFS, Nvec(1:4));
 
