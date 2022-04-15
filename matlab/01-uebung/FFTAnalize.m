@@ -9,7 +9,9 @@ for index = 1:countOfN
     N = framelength * FS;
     [spec f] = calculateFFT(signalVec, FS, N);
     subplot(halfCountOfN,2,index)
-    plot(f, abs(spec));
+    abs_spec = abs(spec);
+    plot(f, abs_spec);
+    axis([0 4000 min(abs_spec) max(abs_spec*1.05)])
     title(int2str(N) + " ms");
     ylabel("Â(f)");
     xlabel("f (Hz)");
