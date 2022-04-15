@@ -1,93 +1,218 @@
 <html>
+
 <head>
-<title></title>
-<link rel="stylesheet" type="text/css" href="format.css">
-<style type="text/css">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="format.css">
+    <style type="text/css">
+        a:link {
+            font-family: Arial;
+            font-size: 10pt;
+            text-decoration: none;
+        }
         
-                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
-                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
-                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        a:visited {
+            font-family: Arial;
+            font-size: 10pt;
+            text-decoration: none;
+        }
         
-</style>
+        a:hover {
+            color: #FF3333;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 10pt;
+        }
+    </style>
 </head>
 
 <body>
 
-<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+    <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
          <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
          folgenden.</p>
 </iframe>
 
-<h2>&Uuml;bung 1</h2>
-<article>
+    <h2>&Uuml;bung 1</h2>
+    <article>
         <header>
-                <h3>Aufgabe 1 - 1.1</h3>
+            <h3>Aufgabe 1 - 1.1</h3>
         </header>
         <section>
-               <p>In dieser Übung geht es um die Fouriersynthese und -analyse. Erzeuge mit Matlab/Octave ein
-                Sinusgemisch mit den folgenden Eigenschaften (f: Frequenz, A: Amplitude, phi Phasenwinkel):</p> 
-                <ul>
-                        <li>f1=500Hz A1=1 phi1=0</li>
-                        <li>f2=1000Hz A2=0,5 phi2=-pi/2</li>
-                        <li>f3=2000Hz A3=0,25 phi3=pi</li>
-                </ul>
-                <p>und einer Dauer von 5 s. Zeichne das Sinusgemisch mit plot im Bereich t=0-20ms. Dabei soll auf
-                        der x-Achse die Zeit in ms abgetragen sein. Gibt die Schwingung als Wave-Datei mit wavwrite
-                        aus, und zwar mit einer Abtastfrequenz fa von 16kHz und einer Auflösung von 16bit. Dabei
-                        skalieren, um Clipping zu vermeiden.</p>
+            <p>In dieser Übung geht es um die Fouriersynthese und -analyse. Erzeuge mit Matlab/Octave ein Sinusgemisch mit den folgenden Eigenschaften (f: Frequenz, A: Amplitude, phi Phasenwinkel):</p>
+            <ul>
+                <li>f1=500Hz A1=1 phi1=0</li>
+                <li>f2=1000Hz A2=0,5 phi2=-pi/2</li>
+                <li>f3=2000Hz A3=0,25 phi3=pi</li>
+            </ul>
+            <p>und einer Dauer von 5 s. Zeichne das Sinusgemisch mit plot im Bereich t=0-20ms. Dabei soll auf der x-Achse die Zeit in ms abgetragen sein. Gibt die Schwingung als Wave-Datei mit wavwrite aus, und zwar mit einer Abtastfrequenz fa von 16kHz
+                und einer Auflösung von 16bit. Dabei skalieren, um Clipping zu vermeiden.</p>
+            <td><img src="./matlab/01-uebung/aufgabe1.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
+            <br>
+            <audio controls><source src="./matlab/01-uebung/aufgabe1_output.wav" type="audio/wav"></audio>
+
+            <pre>
+                        <code>
+                        % Parameter für erste Sinusschwingung
+                        f1 = 500; % Frequenz in Herz
+                        A1 = 1; % Amplitude
+                        phi1 = 0; % Phasenverschiebung
+                        
+                        % Parameter für zweite Sinusschwingung
+                        f2 = 1000;
+                        A2 = 0.5;
+                        phi2 = -pi/2;
+                        
+                        % Parameter für dritte Sinusschwingung
+                        f3 = 2000;
+                        A3 = 0.25;
+                        phi3 = pi;
+                        
+                        f_a = 16000; % Abtastfrequenz in Hz
+                        afl = 16; % Auflösung 16 Bit
+                        
+                        Ta = 1/f_a;
+                        t = 0:Ta:5-Ta; % Dauer 5 Sekunden
+                        tanz = 0:Ta:0.020 - Ta; % Anzeige x-Achse
+                        
+                        A_t1 = A1 * sin(2 * pi * f1 * t + phi1);
+                        A_t2 = A2 * sin(2 * pi * f2 * t + phi2);
+                        A_t3 = A3 * sin(2 * pi * f3 * t + phi3);
+                        
+                        A_ges = A_t1 + A_t2 + A_t3; % Dieses Array enthält jetzt Werte größer -1 bis 1
+                        % Suche maximalwert
+                        maxWert = max(abs(A_ges));
+                        % Teile den Vektor durch den Maximalwert
+                        A_ges = A_ges / maxWert;
+                        
+                        figure('Name',"Sinusschwingungen")
+                        subplot(2,1,1)
+                        plot(t, A_t1, t, A_t2, t,A_t3);
+                        axis([0 0.02 -2 2]);
+                        title("Sinusschwingungen");
+                        ylabel("A");
+                        xlabel("t");
+                        
+                        subplot(2,1,2)
+                        plot(t, A_ges);
+                        axis([0 0.02 -2 2]);
+                        title("Addierte Sinusschwingungen");
+                        ylabel("A");
+                        xlabel("t");
+                        
+                        </code>
+                </pre>
         </section>
-</article>
-<br>
+    </article>
+    <article>
+        <header>
+            <h3>Aufgabe1.2-1.3</h3>
+            <p>Berechne die Fouriertransformation der Sinusschwingung mit der Funktion fft und stelle das ermittelte Amplitudenspektrum mit plot dar. Auf der x-Achse soll dabei die Frequenz in Hertz abgetragen werden dar und zwar zunächst für den Bereich
+                zwischen 0 und Abtastfrequenz fa. Was fällt beim Betrachten des Spektrums auf?</p>
+            <p>
+                Variiere dabei die Framelänge zwischen 50ms, 100ms, 500ms, 1 s und 5 s. Welche Frequenzauflösung delta f erhältst du für die verschiedenen Framelängen? Zoome nun in den Bereich 0 bis 4 kHz hinein. Was fällt beim Spektrum bei der Variation der Framelänge
+                auf? Wie kann man sich diesen Unterschied erklären?</p>
+        </header>
+        <section>
+            <td><img src="./matlab/01-uebung/aufgabe1.2.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
+            <figcaption>Bild 2</figcaption>
+            <td><img src="./matlab/01-uebung/aufgabe1.2.2.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
+            <figcaption>Bild 3</figcaption>
+            <p>Was fällt beim Betrachten des Spektrums auf?</p>
+            <p>Wir sehen die Spieglung des Spektrums welche auf Grund der Abtastung des Signals auftritt.</p>
+            <p>Was fällt beim Spektrum bei der Variation der Framelänge auf?</p>
+            <p>Je kleiner die Framelänge(Analysefenster) gewählt wird, desto ungenauer wird die Ermittlung der Frequenz. Wir sehen in Bild 3, wie die Frequenz ungenauer ist, bei einer niedrigeren Framelänge.</p>
+            <p>Wie kann man sich diesen Unterschied erklären?</p>
+            <p>Durch die geringere Framelänge fallen die Ein- und Ausschalt Störsignale mehr ins Gewicht, weshalb bei einer kleineren Framelänge die ermittelte Frequenz ungenauer ist.</p>
+        </section>
+    </article>
+    <article>
+        <header>
+            <h3>Aufgabe1.4</h3>
+        </header>
+        <section>
+            <p>Nimm nun in Praat den Vokal ‚a‘ und den Vokal ‚i‘ mit 16kHz mono auf, und zwar für jedes Gruppenmitglied. Achte darauf, dass am Anfang der Datei und am Ende keine Pausen bleiben, d.h, die Datei soll gleich mit dem Sprachsignal beginnen. </p>
+            <p>Lies die Datei mit wavread in deinem Matlab-Programm ein. Berechne auch von diesem Signal die Fouriertransformation, diesmal mit Framebreiten von 50ms, 100ms, 500ms, 1 s. Wie unterscheiden sich die Vokale in ihrem Spektrum vom Sinusgemisch
+                und wie unterscheiden sie sich voneinander?</p>
 
-<br><p>Musikaufnahme</p>
-<audio controls><source src="./wav/David_A.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
+            <table>
+                <tr>
+                    <th>Aufnahme David Eichhorn A</th>
+                    <th>Aufnahme David Eichhorn I</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./wav/David_A.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./wav/David_I.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="./matlab/01-uebung/David_A.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                    <th>
+                        <img src="./matlab/01-uebung/David_I.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Aufnahme Marc Ubbelohde A</th>
+                    <th>Aufnahme Marc Ubbelohde I</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./wav/Marc_A.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./wav/Marc_I.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="./matlab/01-uebung/Marc_A.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                    <th>
+                        <img src="./matlab/01-uebung/Marc_I.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                </tr>
+            </table>
 
-<audio controls><source src="./wav/David_I.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
+            <table>
+                <tr>
+                    <th>Aufnahme Stefan Jessel A</th>
+                    <th>Aufnahme Stefan Jessel I</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./wav/Stefan_A.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./wav/Stefan_I.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th>
+                        <img src="./matlab/01-uebung/Stefan_A.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                    <th>
+                        <img src="./matlab/01-uebung/Stefan_I.jpg" alt="Sinusschwingungen" width="350" height="300">
+                    </th>
+                </tr>
+            </table>
+            <p>Wie unterscheiden sich die Vokale in ihrem Spektrum vom Sinusgemisch und wie unterscheiden sie sich voneinander?</p>
+            <p>Die Spektren der Vokale unterscheiden sich vom Sinusgemisch, dadurch, dass die Vokale wesentlich mehr Frequenzen enthalten. A und I haben unterschiedliche Frequenzen die start ausgeprägt sind. A hat die meiste Energie zwischen ~500-1000Hz,
+                I hat die meiste Energie zwischen 200-400Hz gefolgt von einem Ausschlag bei 2000Hz und 3000Hz. Generelle unterschiede der Aufnahmen kommen vermutlich von der Verwendung unterschiedlicher Mikrofone und Aufnahmeumgebunen sowie unterschiedlicher
+                Stimmen. In der Aufnahme von David wurde das A sehr kurz ausgesprochen und hat kaum einen Ausschlag bei 2500Hz und 3300Hz. Marc hat das A mehr gestreckt und wir sehen einen Ausschlag bei 2500Hz und bei 3300Hz. Stefan hat das A weniger
+                gesteckt und der Ausschlag bei 2500Hz und 3300Hz ist weniger ausgeprägt.
+            </p>
+            <p>Stefan das I sehr gestreckt und wir haben wieder im Selben Frequenzbereich Ausschläge David hat das I wieder weniger lang ausgesprochen und einen geringeren Ausschlag im Frequenzbereich.
+            </p>
+            <p>Unsere These ist, dass wenn man einen Vokal beim aussprechen Streckt indem man in ein "H" übergeht, weshalb wir bei den gestreckten Vokalen Ausschläge von 2500Hz und 3300Hz sieht. </p>
+            <p>Wir haben versucht den "H" Lauf aufzunehmen und zu analysieren ob das der Fall ist. Wir konnten diese These aber nicht bestätigen.</p>
+            <table>
+                <tr>
+                    <th>Aufnahme David Eichhorn H</th>
+                </tr>
 
-<br><p>Musikaufnahme</p>
-<audio controls><source src="./wav/Marc_A.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 1 - 1.2</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 2 - 2.1</h3>
-<br><p>Rauschen</p>
-<audio controls><source src="./wav/Marc_I.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
-
-<br><p>Musikaufnahme</p>
-<audio controls><source src="./wav/Stefan_A.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 1 - 1.2</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 2 - 2.1</h3>
-<br><p>Rauschen</p>
-<audio controls><source src="./wav/Stefan_I.wav" type="audio/wav"></audio>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
-<br><h3>Aufgabe 2 - 2.2</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 1 - 1.2</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 2 - 2.1</h3>
-<br><p>Rauschen</p>
-<br><h3>Aufgabe 2 - 2.3</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 3 - 3.1</h3>
-<p>L&ouml;sung</p>
-
+                <tr>
+                    <th><audio controls><source src="./wav/David_H.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./matlab/01-uebung/David_H.jpg" alt="Sinusschwingungen" width="350" height="300"></th>
+                </tr>
+            </table>
+        </section>
+    </article>
 </body>
+
 </html>
