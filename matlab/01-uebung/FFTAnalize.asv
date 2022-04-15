@@ -6,8 +6,8 @@ halfCountOfN = ceil(countOfN/2);
 disp(name);
 for index = 1:countOfN
     framelength = framelengths(index);
-    N = framelength * FS;
-    [spec f] = calculateFFT(signalVec, FS, N);
+    N = framel
+    [spec f] = calculateFFT(signalVec, FS, FS * framelength);
     subplot(halfCountOfN,2,index)
     plot(f, abs(spec));
     title(int2str(N) + " ms");
