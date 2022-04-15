@@ -62,8 +62,8 @@ FFTAnalize("Auswertung Sinusschwingung", A_ges, f_a, Nvec)
 
 audiowrite("aufgabe1_output.wav", A_ges, f_a, "BitsPerSample",afl);
 
-[avec aFS] = audioread("../../wav/David_A.wav");
-[ivec iFS] = audioread("../../wav/David_I.wav");
+[avec aFS] = audioread("../../wav/Stefan_A.wav");
+[ivec iFS] = audioread("../../wav/Stefan_I.wav");
 
 % Stelle Sprachsignale dar
 figure("Name","Sprachsignale");

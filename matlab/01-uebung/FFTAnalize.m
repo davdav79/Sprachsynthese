@@ -12,7 +12,7 @@ for index = 1:countOfN
     abs_spec = abs(spec);
     plot(f, abs_spec);
     axis([0 4000 min(abs_spec) max(abs_spec*1.05)])
-    title(int2str(N) + " ms");
+    title(int2str(framelength) + " ms");
     ylabel("Â(f)");
     xlabel("f (Hz)");
 end
