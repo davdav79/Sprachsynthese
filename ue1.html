@@ -77,8 +77,10 @@
 
             <td><img src="./matlab/01-uebung/aufgabe1.2.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
             <figcaption>Bild 2</figcaption>
-            <td><img src="./matlab/01-uebung/aufgabe1.2.2.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
+            <td><img src="./matlab/01-uebung/aufgabe1.2.3.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
             <figcaption>Bild 3</figcaption>
+            <td><img src="./matlab/01-uebung/aufgabe1.2.2.jpg" alt="Sinusschwingungen" width="700" height="600"></td>
+            <figcaption>Bild 4</figcaption>
             <p>Was fällt beim Betrachten des Spektrums auf?</p>
             <p>Wir sehen die Spieglung des Spektrums welche auf Grund der Abtastung des Signals auftritt.</p>
             <p>Was fällt beim Spektrum bei der Variation der Framelänge auf?</p>
@@ -157,7 +159,7 @@
                 Stimmen. In der Aufnahme von David wurde das A sehr kurz ausgesprochen und hat kaum einen Ausschlag bei 2500Hz und 3300Hz. Marc hat das A mehr gestreckt und wir sehen einen Ausschlag bei 2500Hz und bei 3300Hz. Stefan hat das A weniger
                 gesteckt und der Ausschlag bei 2500Hz und 3300Hz ist weniger ausgeprägt.
             </p>
-            <p>Stefan das I sehr gestreckt und wir haben wieder im Selben Frequenzbereich Ausschläge David hat das I wieder weniger lang ausgesprochen und einen geringeren Ausschlag im Frequenzbereich.
+            <p>Stefan hat das I sehr gestreckt und wir haben wieder im Selben Frequenzbereich Ausschläge. David hat das I wieder weniger lang ausgesprochen und einen geringeren Ausschlag im Frequenzbereich.
             </p>
             <p>Unsere These ist, dass wenn man einen Vokal beim aussprechen streckt indem man in ein "H" übergeht, weshalb wir bei den gestreckten Vokalen Ausschläge von 2500Hz und 3300Hz sieht. </p>
             <p>Wir haben versucht den "H" Lauf aufzunehmen und zu analysieren ob das der Fall ist. Wir konnten diese These aber nicht bestätigen.</p>
@@ -257,6 +259,7 @@ subplot(2,1,1)
 plot(t*1000, A_t1, t*1000, A_t2, t*1000,A_t3);
 axis([0 20 -2 2]);
 title("Sinusschwingungen");
+legend("f1","f2","f3");
 ylabel("A");
 xlabel("t (ms)");
 
@@ -280,27 +283,7 @@ figure('Name',"Fouriertransformierte")
 FFTAnalize("Auswertung Sinusschwingung", A_ges, f_a, Nvec)
 
 audiowrite("aufgabe1_output.wav", A_ges, f_a, "BitsPerSample",afl);
-%Stefan----------------------------------------------------------------------
-[avec aFS] = audioread("../../wav/Stefan_A.wav");
-[ivec iFS] = audioread("../../wav/Stefan_I.wav");
 
-% Stelle Sprachsignale dar
-figure("Name","Sprachsignale");
-subplot(2,1,1);
-plot(avec);
-title("A-Sprachsignal");
-
-subplot(2,1,2);
-plot(ivec);
-title("I-Sprachsignal");
-
-% Berechne und gebe Transformierte Signale aus
-figure('Name',"Sprache-Fouriertransformiert A")
-FFTAnalize("Auswertung A", avec, aFS, Nvec(1:4));
-figure('Name',"Sprache-Fouriertransformiert I")
-FFTAnalize("Auswertung I", ivec, iFS, Nvec(1:4));
-
-%Marc----------------------------------------------------------------------
 [avec aFS] = audioread("../../wav/Marc_A.wav");
 [ivec iFS] = audioread("../../wav/Marc_I.wav");
 
@@ -320,29 +303,7 @@ FFTAnalize("Auswertung A", avec, aFS, Nvec(1:4));
 figure('Name',"Sprache-Fouriertransformiert I")
 FFTAnalize("Auswertung I", ivec, iFS, Nvec(1:4));
 
-%David----------------------------------------------------------------------
-[avec aFS] = audioread("../../wav/David_A.wav");
-[ivec iFS] = audioread("../../wav/David_I.wav");
-[hvec hFS] = audioread("../../wav/David_H.wav");
-
-% Stelle Sprachsignale dar
-figure("Name","Sprachsignale");
-subplot(2,1,1);
-plot(avec);
-title("A-Sprachsignal");
-
-subplot(2,1,2);
-plot(ivec);
-title("I-Sprachsignal");
-
-% Berechne und gebe Transformierte Signale aus
-figure('Name',"Sprache-Fouriertransformiert A")
-FFTAnalize("Auswertung A", avec, aFS, Nvec(1:4));
-figure('Name',"Sprache-Fouriertransformiert I")
-FFTAnalize("Auswertung I", ivec, iFS, Nvec(1:4));
-figure('Name',"Sprache-Fouriertransformiert H")
-FFTAnalize("Auswertung I", hvec, hFS, Nvec(1:4));
-
+                
                 </code></pre>
         </section>
     </article>
