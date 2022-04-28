@@ -1,0 +1,66 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 1.3235 
+tiers? <exists> 
+size = 1 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Marc" 
+        xmin = 0 
+        xmax = 1.3235 
+        intervals: size = 13 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.07638559570312499 
+            text = "v" 
+        intervals [2]:
+            xmin = 0.07638559570312499 
+            xmax = 0.1593896487991898 
+            text = "a:" 
+        intervals [3]:
+            xmin = 0.1593896487991898 
+            xmax = 0.31424795681423606 
+            text = "s" 
+        intervals [4]:
+            xmin = 0.31424795681423606 
+            xmax = 0.36875808123553233 
+            text = "-" 
+        intervals [5]:
+            xmin = 0.36875808123553233 
+            xmax = 0.4542398672598379 
+            text = "I" 
+        intervals [6]:
+            xmin = 0.4542398672598379 
+            xmax = 0.61103306640625 
+            text = "s" 
+        intervals [7]:
+            xmin = 0.61103306640625 
+            xmax = 0.6759969643373842 
+            text = "t" 
+        intervals [8]:
+            xmin = 0.6759969643373842 
+            xmax = 0.8135111418547453 
+            text = "aI" 
+        intervals [9]:
+            xmin = 0.8135111418547453 
+            xmax = 0.9051872601996527 
+            text = "n" 
+        intervals [10]:
+            xmin = 0.9051872601996527 
+            xmax = 1.0055354437934028 
+            text = "z" 
+        intervals [11]:
+            xmin = 1.0055354437934028 
+            xmax = 1.0945392123463202 
+            text = "a" 
+        intervals [12]:
+            xmin = 1.0945392123463202 
+            xmax = 1.1727824164496528 
+            text = "t" 
+        intervals [13]:
+            xmin = 1.1727824164496528 
+            xmax = 1.3235 
+            text = "s" 
