@@ -11,40 +11,36 @@ item []:
         name = "David" 
         xmin = 0 
         xmax = 0.762277 
-        intervals: size = 9 
+        intervals: size = 8 
         intervals [1]:
             xmin = 0 
-            xmax = 0.0011827865776909716 
-            text = "_" 
-        intervals [2]:
-            xmin = 0.0011827865776909716 
             xmax = 0.02615640154441551 
             text = "_" 
-        intervals [3]:
+        intervals [2]:
             xmin = 0.02615640154441551 
             xmax = 0.12105613841796874 
             text = "aU" 
-        intervals [4]:
+        intervals [3]:
             xmin = 0.12105613841796874 
             xmax = 0.17885221876953125 
             text = "t" 
-        intervals [5]:
+        intervals [4]:
             xmin = 0.17885221876953125 
             xmax = 0.24663774510778355 
             text = "o" 
-        intervals [6]:
+        intervals [5]:
             xmin = 0.24663774510778355 
             xmax = 0.3312350551533549 
             text = "b" 
-        intervals [7]:
+        intervals [6]:
             xmin = 0.3312350551533549 
             xmax = 0.45855670639684604 
             text = "a:" 
-        intervals [8]:
+        intervals [7]:
             xmin = 0.45855670639684604 
             xmax = 0.558733553295812 
-            text = "N" 
-        intervals [9]:
+            text = "n" 
+        intervals [8]:
             xmin = 0.558733553295812 
             xmax = 0.762277 
             text = "_" 
