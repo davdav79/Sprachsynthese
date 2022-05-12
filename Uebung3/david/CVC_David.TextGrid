@@ -1,0 +1,100 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.33562 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "wort" 
+        xmin = 0 
+        xmax = 3.33562 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.7224918617147642 
+            text = "lad" 
+        intervals [2]:
+            xmin = 0.7224918617147642 
+            xmax = 1.3659655075374684 
+            text = "led" 
+        intervals [3]:
+            xmin = 1.3659655075374684 
+            xmax = 2.092468010885683 
+            text = "lied" 
+        intervals [4]:
+            xmin = 2.092468010885683 
+            xmax = 2.7359416567083863 
+            text = "lod" 
+        intervals [5]:
+            xmin = 2.7359416567083863 
+            xmax = 3.33562 
+            text = "lud" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "phonem" 
+        xmin = 0 
+        xmax = 3.33562 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.14128985903619262 
+            text = "l" 
+        intervals [2]:
+            xmin = 0.14128985903619262 
+            xmax = 0.4111336459941008 
+            text = "a:" 
+        intervals [3]:
+            xmin = 0.4111336459941008 
+            xmax = 0.7224918617147642 
+            text = "t" 
+        intervals [4]:
+            xmin = 0.7224918617147642 
+            xmax = 0.8418458444076851 
+            text = "l" 
+        intervals [5]:
+            xmin = 0.8418458444076851 
+            xmax = 1.106500327770249 
+            text = "e:" 
+        intervals [6]:
+            xmin = 1.106500327770249 
+            xmax = 1.3659655075374684 
+            text = "t" 
+        intervals [7]:
+            xmin = 1.3659655075374684 
+            xmax = 1.4905087938257335 
+            text = "l" 
+        intervals [8]:
+            xmin = 1.4905087938257335 
+            xmax = 1.7188381520208866 
+            text = "i:" 
+        intervals [9]:
+            xmin = 1.7188381520208866 
+            xmax = 2.092468010885683 
+            text = "t" 
+        intervals [10]:
+            xmin = 2.092468010885683 
+            xmax = 2.201443386387915 
+            text = "l" 
+        intervals [11]:
+            xmin = 2.201443386387915 
+            xmax = 2.4557192625597897 
+            text = "o:" 
+        intervals [12]:
+            xmin = 2.4557192625597897 
+            xmax = 2.7359416567083863 
+            text = "t" 
+        intervals [13]:
+            xmin = 2.7359416567083863 
+            xmax = 2.891620764568718 
+            text = "l" 
+        intervals [14]:
+            xmin = 2.891620764568718 
+            xmax = 3.0991929083824936 
+            text = "u:" 
+        intervals [15]:
+            xmin = 3.0991929083824936 
+            xmax = 3.33562 
+            text = "t" 
