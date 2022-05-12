@@ -1,0 +1,100 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.12575 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "Wort" 
+        xmin = 0 
+        xmax = 2.12575 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.4976462566864102 
+            text = "alle" 
+        intervals [2]:
+            xmin = 0.4976462566864102 
+            xmax = 0.9195899530946887 
+            text = "amme" 
+        intervals [3]:
+            xmin = 0.9195899530946887 
+            xmax = 1.3292269583577256 
+            text = "affe" 
+        intervals [4]:
+            xmin = 1.3292269583577256 
+            xmax = 1.7476544572959352 
+            text = "asse" 
+        intervals [5]:
+            xmin = 1.7476544572959352 
+            xmax = 2.12575 
+            text = "anne" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "Phonemic" 
+        xmin = 0 
+        xmax = 2.12575 
+        intervals: size = 15 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.12844552232916653 
+            text = "a" 
+        intervals [2]:
+            xmin = 0.12844552232916653 
+            xmax = 0.19525327426047728 
+            text = "l" 
+        intervals [3]:
+            xmin = 0.19525327426047728 
+            xmax = 0.4976462566864102 
+            text = "@" 
+        intervals [4]:
+            xmin = 0.4976462566864102 
+            xmax = 0.5890673909082038 
+            text = "a" 
+        intervals [5]:
+            xmin = 0.5890673909082038 
+            xmax = 0.6787304263949631 
+            text = "m" 
+        intervals [6]:
+            xmin = 0.6787304263949631 
+            xmax = 0.9195899530946887 
+            text = "@" 
+        intervals [7]:
+            xmin = 0.9195899530946887 
+            xmax = 0.9969462974362064 
+            text = "a" 
+        intervals [8]:
+            xmin = 0.9969462974362064 
+            xmax = 1.102432221538276 
+            text = "f" 
+        intervals [9]:
+            xmin = 1.102432221538276 
+            xmax = 1.3274688596226911 
+            text = "@" 
+        intervals [10]:
+            xmin = 1.3274688596226911 
+            xmax = 1.415373796374416 
+            text = "a" 
+        intervals [11]:
+            xmin = 1.415373796374416 
+            xmax = 1.5278921154166234 
+            text = "s" 
+        intervals [12]:
+            xmin = 1.5278921154166234 
+            xmax = 1.7476544572959352 
+            text = "@" 
+        intervals [13]:
+            xmin = 1.7476544572959352 
+            xmax = 1.8320431965775907 
+            text = "a" 
+        intervals [14]:
+            xmin = 1.8320431965775907 
+            xmax = 1.890060454833729 
+            text = "n" 
+        intervals [15]:
+            xmin = 1.890060454833729 
+            xmax = 2.12575 
+            text = "@" 
