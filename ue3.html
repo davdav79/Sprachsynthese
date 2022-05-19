@@ -1,41 +1,121 @@
 <html>
-<head>
-<title></title>
-<link rel="stylesheet" type="text/css" href="format.css">
-<style type="text/css">
-        <!--
-                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
-                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
-                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
-        //-->
-</style>
-</head>
+
+        <head>
+                <title></title>
+                <link rel="stylesheet" type="text/css" href="format.css">
+                <style type="text/css">
+                    a:link {
+                        font-family: Arial;
+                        font-size: 10pt;
+                        text-decoration: none;
+                    }
+            
+                    a:visited {
+                        font-family: Arial;
+                        font-size: 10pt;
+                        text-decoration: none;
+                    }
+            
+                    a:hover {
+                        color: #FF3333;
+                        text-decoration: none;
+                        font-weight: normal;
+                        font-size: 10pt;
+                    }
+                </style>
+            </head>
 
 <body>
-
-<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
-         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
-         folgenden.</p>
-</iframe>
-
-<h2>&Uuml;bung 3</h2>
-<br><h3>Aufgabe 1 - 1.1</h3>
-<video controls width="650" height="550">
-    <!--source src="./video/greenscreen.webm" type="video/mp4" /-->
-    <source src="./video/wildlife.webm" type="video/webm" />
-</video>
-<p>Beschreibung</p>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 1 - 1.2</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 2 - 2.1</h3>
-<p>L&ouml;sung</p>
-
-<br><h3>Aufgabe 2 - 2.2</h3>
-<p>L&ouml;sung</p>
-
+        <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+                <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+                folgenden.</p>
+       </iframe>
+       <h2>&Uuml;bung 3</h2>
+       <article>
+        <header>
+            <h3>Aufgabe 3.1</h3>
+        </header>
+        <section>
+            <p>Schreibe ein Matlab-Skript zur Berechnung eines Histogramms für eine Sprachdatei
+                (Wertebereich -1 -> 1, Intervallgröße 0,1). Zeichne für jedes Gruppenmitglied mit PRAAT
+                einen Satz (ca. 10 Wörter) auf und berechne jeweils die Histogramme (Pausen vor und
+                hinter dem Sprachsignal mit PRAAT abschneiden). Zeichne diese für die einzelnen Dateien
+                graphisch in dasselbe Diagramm (x-Achse: Amplituden-Wertebereiche, y-Achse:
+                Prozentangaben). Wie unterscheiden sich die ADVs der einzelnen Dateien? Aus dem
+                Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das
+                Signal einen DC-Offset hat. Wie?</p>
+            
+            <img src="./Uebung3/Aufgabe3.1.jpg" alt="" width="700" height="600">
+            <br>
+            <table>
+                    <tr>
+                            <th>David Satz</th>
+                            <th>Marc Satz</th>
+                            <th>Stefan Satz</th>
+                    </tr>
+                    <tr>
+                        <th><audio controls><source src="./Uebung3/david/Satz_David.wav" type="audio/wav"></audio></th>
+                        <th><audio controls><source src="./Uebung3/marc/Satz_Marc.wav" type="audio/wav"></audio></th>
+                        <th><audio controls><source src="./Uebung3/stefan/Satz_Stefan.wav" type="audio/wav"></audio></th>
+                        
+                    </tr>
+            </table>
+            <br>
+            <a style="color:blue;" href="./Uebung3/ueb3.m">Matlab-Skript Histogramm</a>
+        </section>
+    </article>
+    <article>
+        <header>
+            <h3>Aufgabe 3.2</h3>
+        </header>
+        <section>
+            <p></p>
+            <table>
+                    <tr>
+                            <th>David CVC</th>
+                            <th>Marc CVC</th>
+                            <th>Stefan CVC</th>
+                    </tr>
+                    <tr>
+                        <th><audio controls><source src="./Uebung3/david/CVC_David.wav" type="audio/wav"></audio></th>
+                        <th><audio controls><source src="./Uebung3/marc/CVC_Marc.wav" type="audio/wav"></audio></th>
+                        <th><audio controls><source src="./Uebung3/stefan/CVC_Stefan.wav" type="audio/wav"></audio></th>
+                        
+                    </tr>
+                    <tr>
+                            <th><img src="./Uebung3/david/CVC_David.JPG" width="350" height="300"></th>
+                            <th><img src="./Uebung3/marc/CVC_Marc.png" width="350" height="300"></th>
+                            <th><img src="./Uebung3/stefan/CVC_Stefan.png" width="350" height="300"></th>
+                    </tr>
+                    <tr>
+                        <th><a style="color:blue;" href="./Uebung3/david/CVC_David.TextGrid">Transkriptionstabelle CVC David</a></th>
+                        <th><a style="color:blue;" href="./Uebung3/marc/CVC_Marc.TextGrid">Transkriptionstabelle CVC Marc</a></th>
+                        <th><a style="color:blue;" href="./Uebung3/stefan/CVC_Stefan.TextGrid">Transkriptionstabelle CVC Stefan</a></th>
+                    </tr>
+                    <tr>
+                        <th>David VCV</th>
+                        <th>Marc VCV</th>
+                        <th>Stefan VCV</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung3/david/VCV_David.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/marc/VCV_Marc.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/stefan/VCV_Stefan.wav" type="audio/wav"></audio></th>
+                    
+                </tr>
+                <tr>
+                        <th><img src="./Uebung3/david/VCV_David.JPG" width="350" height="300"></th>
+                        <th><img src="./Uebung3/marc/VCV_Marc.png" width="350" height="300"></th>
+                        <th><img src="./Uebung3/stefan/VCV_Stefan.png" width="350" height="300"></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung3/david/VCV_David.TextGrid">Transkriptionstabelle VCV David</a></th>
+                    <th><a style="color:blue;" href="./Uebung3/marc/VCV_Marc.TextGrid">Transkriptionstabelle VCV Marc</a></th>
+                    <th><a style="color:blue;" href="./Uebung3/stefan/VCV_Stefan.TextGrid">Transkriptionstabelle VCV Stefan</a></th>
+                </tr>
+            </table>
+        </section>
+    </article>
 
 </body>
 </html>
