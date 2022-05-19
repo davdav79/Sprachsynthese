@@ -45,7 +45,7 @@
                 Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das
                 Signal einen DC-Offset hat. Wie?</p>
             
-            <img src="./Uebung3/Aufgabe3.1.jpg" alt="" width="700" height="600">
+            <img src="./Uebung3/Aufgabe3.1.jpg" alt="" width="1200" height="600">
             <br>
             <table>
                     <tr>
@@ -62,6 +62,18 @@
             </table>
             <br>
             <a style="color:blue;" href="./Uebung3/ueb3.m">Matlab-Skript Histogramm</a>
+            <h2>Wie unterscheiden sich die ADVs der einzelnen Dateien?</h3>
+            <p>Die ADV's schlagen unterschielich weit aus. Die Verteilung von anderen Werten ist relativ ähnliche, und alle im selben Format wie die Laplace - ADV.
+                Der geringere Ausschlagt bei David im Verglich zu den anderen beiden liegt vermutlich daran, dass er bei der Aufnahme eine Maske auf hatte.
+                Die Unterschiede in den bereichen von -0.2 bis 0 und 0 bis 0.2 liegen daran, dass unsere Stimmen unterschiedlich sind.  
+            </p>
+            <h2>Aus dem Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das
+                Signal einen DC-Offset hat. Wie?</h3>
+                <p>Wir sehen, dass unsere Histogramme nicht von -1 bis 1 gehen, sonder nur bis etwa 0,6 woraus wir schließen können, dass wir den Wertebereich nicht voll ausgenutzt haben.
+                    Das heißt unsere Aufnahmen waren zu leise und wir haben nicht voll ausgesteuert.
+                    Das DC-Offset können wir daran erkennen, dass Sprachsignale die meisten Vorkommen bei der 0 haben. Bei David ist der höchste Punkt nicht genau über 0 woraus wir schließen könnten, dass es dort ein DC-offset gibt.
+                    Da wir alle das selbe Mikrofon verwendet haben, vermuten wir aber, dass dies daran liegt, dass bei David's Aufnahme mehr hintergrundgeräusche vorhanden waren.
+                </p>
         </section>
     </article>
     <article>
@@ -76,6 +88,8 @@
                             <th>Marc CVC</th>
                             <th>Stefan CVC</th>
                     </tr>
+                    <tr><p>Verwndete CVC: lad, led, lied, lod, lud</p></tr>
+                    <tr></tr>
                     <tr>
                         <th><audio controls><source src="./Uebung3/david/CVC_David.wav" type="audio/wav"></audio></th>
                         <th><audio controls><source src="./Uebung3/marc/CVC_Marc.wav" type="audio/wav"></audio></th>
@@ -97,6 +111,7 @@
                         <th>Marc VCV</th>
                         <th>Stefan VCV</th>
                 </tr>
+                <tr><p>Verwndete VCV: alle, amme, affe, asse, anne</p></tr>
                 <tr>
                     <th><audio controls><source src="./Uebung3/david/VCV_David.wav" type="audio/wav"></audio></th>
                     <th><audio controls><source src="./Uebung3/marc/VCV_Marc.wav" type="audio/wav"></audio></th>
