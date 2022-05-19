@@ -1,79 +1,71 @@
 <html>
 
-        <head>
-                <title></title>
-                <link rel="stylesheet" type="text/css" href="format.css">
-                <style type="text/css">
-                    a:link {
-                        font-family: Arial;
-                        font-size: 10pt;
-                        text-decoration: none;
-                    }
-            
-                    a:visited {
-                        font-family: Arial;
-                        font-size: 10pt;
-                        text-decoration: none;
-                    }
-            
-                    a:hover {
-                        color: #FF3333;
-                        text-decoration: none;
-                        font-weight: normal;
-                        font-size: 10pt;
-                    }
-                </style>
-            </head>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="format.css">
+    <style type="text/css">
+        a:link {
+            font-family: Arial;
+            font-size: 10pt;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            font-family: Arial;
+            font-size: 10pt;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #FF3333;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 10pt;
+        }
+    </style>
+</head>
 
 <body>
-        <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+    <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
                 <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
                 folgenden.</p>
        </iframe>
-       <h2>&Uuml;bung 3</h2>
-       <article>
+    <h2>&Uuml;bung 3</h2>
+    <article>
         <header>
             <h3>Aufgabe 3.1</h3>
         </header>
         <section>
-            <p>Schreibe ein Matlab-Skript zur Berechnung eines Histogramms für eine Sprachdatei
-                (Wertebereich -1 -> 1, Intervallgröße 0,1). Zeichne für jedes Gruppenmitglied mit PRAAT
-                einen Satz (ca. 10 Wörter) auf und berechne jeweils die Histogramme (Pausen vor und
-                hinter dem Sprachsignal mit PRAAT abschneiden). Zeichne diese für die einzelnen Dateien
-                graphisch in dasselbe Diagramm (x-Achse: Amplituden-Wertebereiche, y-Achse:
-                Prozentangaben). Wie unterscheiden sich die ADVs der einzelnen Dateien? Aus dem
-                Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das
-                Signal einen DC-Offset hat. Wie?</p>
-            
+            <p>Schreibe ein Matlab-Skript zur Berechnung eines Histogramms für eine Sprachdatei (Wertebereich -1 -> 1, Intervallgröße 0,1). Zeichne für jedes Gruppenmitglied mit PRAAT einen Satz (ca. 10 Wörter) auf und berechne jeweils die Histogramme (Pausen
+                vor und hinter dem Sprachsignal mit PRAAT abschneiden). Zeichne diese für die einzelnen Dateien graphisch in dasselbe Diagramm (x-Achse: Amplituden-Wertebereiche, y-Achse: Prozentangaben). Wie unterscheiden sich die ADVs der einzelnen
+                Dateien? Aus dem Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das Signal einen DC-Offset hat. Wie?</p>
+
             <img src="./Uebung3/Aufgabe3.1.jpg" alt="" width="1200" height="600">
             <br>
             <table>
-                    <tr>
-                            <th>David Satz</th>
-                            <th>Marc Satz</th>
-                            <th>Stefan Satz</th>
-                    </tr>
-                    <tr>
-                        <th><audio controls><source src="./Uebung3/david/Satz_David.wav" type="audio/wav"></audio></th>
-                        <th><audio controls><source src="./Uebung3/marc/Satz_Marc.wav" type="audio/wav"></audio></th>
-                        <th><audio controls><source src="./Uebung3/stefan/Satz_Stefan.wav" type="audio/wav"></audio></th>
-                        
-                    </tr>
+                <tr>
+                    <th>David Satz</th>
+                    <th>Marc Satz</th>
+                    <th>Stefan Satz</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung3/david/Satz_David.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/marc/Satz_Marc.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/stefan/Satz_Stefan.wav" type="audio/wav"></audio></th>
+
+                </tr>
             </table>
             <br>
             <a style="color:blue;" href="./Uebung3/ueb3.m">Matlab-Skript Histogramm</a>
             <h2>Wie unterscheiden sich die ADVs der einzelnen Dateien?</h3>
-            <p>Die ADV's schlagen unterschielich weit aus. Die Verteilung von anderen Werten ist relativ ähnliche, und alle im selben Format wie die Laplace - ADV.
-                Der geringere Ausschlagt bei David im Verglich zu den anderen beiden liegt vermutlich daran, dass er bei der Aufnahme eine Maske auf hatte.
-                Die Unterschiede in den bereichen von -0.2 bis 0 und 0 bis 0.2 liegen daran, dass unsere Stimmen unterschiedlich sind.  
-            </p>
-            <h2>Aus dem Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das
-                Signal einen DC-Offset hat. Wie?</h3>
-                <p>Wir sehen, dass unsere Histogramme nicht von -1 bis 1 gehen, sonder nur bis etwa 0,6 woraus wir schließen können, dass wir den Wertebereich nicht voll ausgenutzt haben.
-                    Das heißt unsere Aufnahmen waren zu leise und wir haben nicht voll ausgesteuert.
-                    Das DC-Offset können wir daran erkennen, dass Sprachsignale die meisten Vorkommen bei der 0 haben. Bei David ist der höchste Punkt nicht genau über 0 woraus wir schließen könnten, dass es dort ein DC-offset gibt.
-                    Da wir alle das selbe Mikrofon verwendet haben, vermuten wir aber, dass dies daran liegt, dass bei David's Aufnahme mehr hintergrundgeräusche vorhanden waren.
+                <p>Die ADV's schlagen unterschielich weit aus. Die Verteilung der Werte der Aufnahmen ist relativ ähnlich, und alle im selben Format wie die Laplace - ADV. Der geringere Ausschlag bei David im Verglich zu den anderen beiden liegt vermutlich
+                    daran, dass er bei der Aufnahme eine Maske getragen hat, was seine Stimme gedämpft hat. Die Unterschiede in den bereichen von -0.2 bis 0 und 0 bis 0.2 liegen daran, dass unsere Stimmen unterschiedlich sind.
                 </p>
+                <h2>Aus dem Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das Signal einen DC-Offset hat. Wie?</h3>
+                    <p>Wir sehen, dass unsere Histogramme nicht von -1 bis 1 gehen, sondern nur bis etwa 0,6. Daraus schließen wir, dass wir den Wertebereich nicht voll ausgenutzt haben. Das heißt unsere Aufnahmen waren zu leise und wir haben nicht voll
+                        ausgesteuert. Das DC-Offset können wir daran erkennen, dass Sprachsignale die meisten Vorkommen bei der 0 haben. Bei David ist der höchste Punkt nicht genau über 0 woraus wir schließen könnten, dass es dort ein DC-offset gibt.
+                        Da wir alle das selbe Mikrofon verwendet haben, vermuten wir aber, dass dies daran liegt, dass bei David's Aufnahme mehr hintergrundgeräusche vorhanden waren.
+                    </p>
         </section>
     </article>
     <article>
@@ -83,45 +75,49 @@
         <section>
             <p></p>
             <table>
-                    <tr>
-                            <th>David CVC</th>
-                            <th>Marc CVC</th>
-                            <th>Stefan CVC</th>
-                    </tr>
-                    <tr><p>Verwndete CVC: lad, led, lied, lod, lud</p></tr>
-                    <tr></tr>
-                    <tr>
-                        <th><audio controls><source src="./Uebung3/david/CVC_David.wav" type="audio/wav"></audio></th>
-                        <th><audio controls><source src="./Uebung3/marc/CVC_Marc.wav" type="audio/wav"></audio></th>
-                        <th><audio controls><source src="./Uebung3/stefan/CVC_Stefan.wav" type="audio/wav"></audio></th>
-                        
-                    </tr>
-                    <tr>
-                            <th><img src="./Uebung3/david/CVC_David.JPG" width="350" height="300"></th>
-                            <th><img src="./Uebung3/marc/CVC_Marc.png" width="350" height="300"></th>
-                            <th><img src="./Uebung3/stefan/CVC_Stefan.JPG" width="350" height="300"></th>
-                    </tr>
-                    <tr>
-                        <th><a style="color:blue;" href="./Uebung3/david/CVC_David.TextGrid">Transkriptionstabelle CVC David</a></th>
-                        <th><a style="color:blue;" href="./Uebung3/marc/CVC_Marc.TextGrid">Transkriptionstabelle CVC Marc</a></th>
-                        <th><a style="color:blue;" href="./Uebung3/stefan/CVC_Stefan.TextGrid">Transkriptionstabelle CVC Stefan</a></th>
-                    </tr>
-                    <tr>
-                        <th>David VCV</th>
-                        <th>Marc VCV</th>
-                        <th>Stefan VCV</th>
+                <tr>
+                    <th>David CVC</th>
+                    <th>Marc CVC</th>
+                    <th>Stefan CVC</th>
                 </tr>
-                <tr><p>Verwndete VCV: alle, amme, affe, asse, anne</p></tr>
+                <tr>
+                    <p>Verwndete CVC: lad, led, lied, lod, lud</p>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung3/david/CVC_David.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/marc/CVC_Marc.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung3/stefan/CVC_Stefan.wav" type="audio/wav"></audio></th>
+
+                </tr>
+                <tr>
+                    <th><img src="./Uebung3/david/CVC_David.JPG" width="350" height="300"></th>
+                    <th><img src="./Uebung3/marc/CVC_Marc.png" width="350" height="300"></th>
+                    <th><img src="./Uebung3/stefan/CVC_Stefan.JPG" width="350" height="300"></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung3/david/CVC_David.TextGrid">Transkriptionstabelle CVC David</a></th>
+                    <th><a style="color:blue;" href="./Uebung3/marc/CVC_Marc.TextGrid">Transkriptionstabelle CVC Marc</a></th>
+                    <th><a style="color:blue;" href="./Uebung3/stefan/CVC_Stefan.TextGrid">Transkriptionstabelle CVC Stefan</a></th>
+                </tr>
+                <tr>
+                    <th>David VCV</th>
+                    <th>Marc VCV</th>
+                    <th>Stefan VCV</th>
+                </tr>
+                <tr>
+                    <p>Verwndete VCV: alle, amme, affe, asse, anne</p>
+                </tr>
                 <tr>
                     <th><audio controls><source src="./Uebung3/david/VCV_David.wav" type="audio/wav"></audio></th>
                     <th><audio controls><source src="./Uebung3/marc/VCV_Marc.wav" type="audio/wav"></audio></th>
                     <th><audio controls><source src="./Uebung3/stefan/VCV_Stefan.wav" type="audio/wav"></audio></th>
-                    
+
                 </tr>
                 <tr>
-                        <th><img src="./Uebung3/david/VCV_David.JPG" width="350" height="300"></th>
-                        <th><img src="./Uebung3/marc/VCV_Marc.png" width="350" height="300"></th>
-                        <th><img src="./Uebung3/stefan/VCV_Stefan.JPG" width="350" height="300"></th>
+                    <th><img src="./Uebung3/david/VCV_David.JPG" width="350" height="300"></th>
+                    <th><img src="./Uebung3/marc/VCV_Marc.png" width="350" height="300"></th>
+                    <th><img src="./Uebung3/stefan/VCV_Stefan.JPG" width="350" height="300"></th>
                 </tr>
                 <tr>
                     <th><a style="color:blue;" href="./Uebung3/david/VCV_David.TextGrid">Transkriptionstabelle VCV David</a></th>
@@ -133,4 +129,5 @@
     </article>
 
 </body>
+
 </html>
