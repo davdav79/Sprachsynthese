@@ -3,17 +3,19 @@ home    % verschiebt inhalt im command window, alternatic clc(löschen und nicht
 close all   % schließt alle grafikfenster
 
 % Einlesen der wave-files
-filename1 = "david/Satz_David.wav";
-filename2 = "marc/Satz_Marc.wav";
-filename3 = "stefan/Satz_Stefan.wav";
+filename1 = "/home/mub/Desktop/Abgabe/Uebung3/david/Satz_David.wav";
+filename2 = "/home/mub/Desktop/Abgabe/Uebung3/marc/Satz_Marc.wav";
+filename3 = "/home/mub/Desktop/Abgabe/Uebung3/stefan/Satz_Stefan.wav";
 [sk1,Fs] = audioread(filename1);
 [sk2,Fs] = audioread(filename2);
 [sk3,Fs] = audioread(filename3);
 
+edges = [-1, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+
 % Erstellen der Histogramme
-[hist1,x1] = hist(sk1,21);
-[hist2,x2] = hist(sk2,21);
-[hist3,x3] = hist(sk3,21);
+[hist1,x1] = hist(sk1,edges);
+[hist2,x2] = hist(sk2,edges);
+[hist3,x3] = hist(sk3,edges);
 
 % Berechnung der Wahrscheinlichkeitswerte
 prob1 = hist1/sum(hist1)*100;
