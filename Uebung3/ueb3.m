@@ -3,9 +3,9 @@ home    % verschiebt inhalt im command window, alternatic clc(löschen und nicht
 close all   % schließt alle grafikfenster
 
 % Einlesen der wave-files
-filename1 = "/home/mub/Desktop/Abgabe/Uebung3/david/Satz_David.wav";
-filename2 = "/home/mub/Desktop/Abgabe/Uebung3/marc/Satz_Marc.wav";
-filename3 = "/home/mub/Desktop/Abgabe/Uebung3/stefan/Satz_Stefan.wav";
+filename1 = "./david/Satz_David.wav";
+filename2 = "./marc/Satz_Marc.wav";
+filename3 = "./stefan/Satz_Stefan.wav";
 [sk1,Fs] = audioread(filename1);
 [sk2,Fs] = audioread(filename2);
 [sk3,Fs] = audioread(filename3);
@@ -30,7 +30,7 @@ legend({'Satz David','Satz Marc','Satz Stefan'},'Location','northeast')
 xlim([-1 1])
 xlabel("Amplituden-Wertebereich")
 ylabel("Häufigkeit in %")
-
+xticks(edges)
 % Plot David Formanten
 figure()
 TDavid = readtable("david/formant.csv","NumHeaderLines", 1)
