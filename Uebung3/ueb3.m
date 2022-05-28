@@ -10,6 +10,10 @@ filename3 = "./stefan/Satz_Stefan.wav";
 [sk2,Fs] = audioread(filename2);
 [sk3,Fs] = audioread(filename3);
 
+mean1 = mean(sk1);
+mean2 = mean(sk2);
+mean3 = mean(sk3);
+
 edges = [-1, -0.9, -0.8, -0.7, -0.6, -0.5, -0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 
 % Erstellen der Histogramme
