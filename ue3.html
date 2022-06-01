@@ -58,22 +58,22 @@
             <a style="color:blue;" href="./Uebung3/ueb3.m">Matlab-Skript Histogramm</a>
             <h2>Wie unterscheiden sich die ADVs der einzelnen Dateien?</h3>
                 <p>
-                  Die ADV's schlagen unterschielich stark aus. Die Verteilung der Werte der Aufnahmen ist aber recht
-                  ähnlich und es handelt sich bei allen um Gamma - ADV. Alle ADV's haben ihr Maximum bei 0 und sind
-                  relativ gleichm#ßig zu beiden Sieten abfallend. Stefans Histogramm fällt hierbei am schnelssten ab
+                  Die ADV's schlagen bei dem Wert 0 unterschiedlich stark aus. Die Verteilung der Werte der Aufnahmen ist aber recht
+                  ähnlich und es handelt sich bei allen ungefähr um Gamma - ADV. Alle ADV's haben ihr Maximum bei 0 und sind
+                  relativ gleichmäßig zu beiden Sieten abfallend. Stefans Histogramm fällt hierbei am schnelssten ab
                   und Davids am langsamsten. In Davids Histogramm ist außerdem eine Unsymmetrie erkennbar, so treten
                   übermäßig häufig Werte im Bereich 0,05 bis 0,15 verglichen zum Bereich von -0,15 bis -0,05 auf.
                 </p>
                 <h2>Aus dem Histogramm läßt sich auch ablesen, wie gut die Aufnahmen ausgesteuert sind und ob das Signal einen DC-Offset hat. Wie?</h3>
                     <p>
-                      Wir sehen, dass unsere Histogramme nicht von -1 bis 1 gehen, sondern nur bis etwa 0,6.
+                      Anhand der Werte ungleich 0 kann man ablesen wie stark das Mikrofon
+                      ausgesteuert hat. Treten diese häufiger auf, sind mehr laute Töne enthalten. Wir sehen, dass unsere Histogramme nicht von -1 bis 1 gehen, sondern nur von etwa -0.6 bis etwa 0,6.
                       Daraus schließen wir, dass wir den Wertebereich nicht voll ausgenutzt haben da unsere
-                      Aufnahmen zu leise waren. Anhand der Werte ungleich 0 kann man ablesen wie stark das Mikrofon
-                      ausgesteuert hat. Treten diese häufiger auf, sind mehr laute Töne enthalten. Da wir alle den gleichen
-                      Satz mit dem selben Mikrofon eingesprochen haben lässt sich aus diesen Werten das Aussteuern des Mikrofons
-                      ableiten. Erkennbar ist, das bei David das mikrofon am meisten ausgesteuert hat und bei Stefan am wenigsten.
+                      Aufnahmen das Mikrofon nicht ausreichend ausgesteuert haben. Da wir alle den gleichen
+                      Satz mit dem selben Mikrofon eingesprochen haben lässt sich aus den Werten ungleich 0 das Aussteuern des Mikrofons
+                      ableiten. Erkennbar ist, das bei David das Mikrofon am meisten ausgesteuert hat und bei Stefan am wenigsten.
                       Diese Unterschiede sind im wesentlichen von der Laustärke der Stimme, dem Abstand zum Mikrofon, Hintergrundgeräuschen
-                      und der Länge von Pausen abhängig.
+                      und den Längen von Pausen abhängig.
                     </p>
                     <p>
                       Einen DC-Offset erkennt man daran, das der Durchschnittswert der Sprachaufnahme von 0 abweichend ist.
@@ -83,7 +83,7 @@
                       Die Werte sind: für David: -0.0000015694, für Marc: -0.0000048828 und für Stefan: +0.0000012964. Da ein DC-Offset
                       oft vom Mikrofon abhängig ist, wir jedoch alle das selbe Mikrofon verwendet haben und trotzdem sowohl in positive
                       als auch in negative Richtung sehr geringe Abweichungen auftreten, lässt sich hierraus schließen, das kein erkennbarer
-                      DC-Offset vorliegt.
+                      DC-Offset vorliegt. Ein DC-Offset könnte über die Durchschnittswertberechnung einer langen Aufnahme von Rauschen akkurater bestimmt werden.
                     </p>
         </section>
     </article>
@@ -174,8 +174,8 @@
               gewölbt. (aufgrund größerer Aussteuerung gut bei David erkennbar)
             </p>
             <p>
-              Die Oszillogramme sind stark vom Sprecher abhängig. a: ist noch bei allen tendenziell
-              abnehmen aber bereits bei e: zeigen sich Unterschiede. e: ist bei Marc abnehmend, aber bei
+              Die Oszillogramme sind stark vom Sprecher abhängig. a: ist bei allen tendenziell
+              abnehmend. Bei e: zeigen sich Unterschiede. e: ist bei Marc abnehmend, aber bei
               David und Stefan konstant. i: ist bei David konstant, bei Marc abnehmend und bei Stefan
               ansteigend. o: ist bei allen zur Mitte des Phonems abnehmend und dann wieder zunehmend.
               u: ist bei Marc und David abnehmend und bei Stefan zunehmend.
@@ -194,7 +194,7 @@
             </h2>
             <p>
               Die Konsonanten unterscheiden sich stark voneinander, sind aber grob in 2 Gruppen einteilbar.
-              So ist sowohl das Spektrum von f als auch von s sehr durchmischt (da keine stimmhafte Phoneme).
+              So ist sowohl das Spektrum von f als auch von s sehr durchmischt (da keine stimmhaften Phoneme).
               Die Aussteuerung ist größer bei s. Es gibt aber große Unterschiede zwischen den Sprechern, so
               sind zb. f und s sehr viel lauter bei Marc als bei Stefan. Spektrum und Oszillogramm von n und m
               sehen sehr ähnlich aus. Die Grundfrequenz von n ist jedoch tiefer als bei m. Das Spektrum von l
@@ -218,9 +218,9 @@
               Beim aussprechen von alle bewegt sich die Zunge von hinten nach vorne. Für das l wird die Zunge an den Zahn gehoben und für das e dann der Raum wieder geöffnet.
               Die Art des Konsonanten m ist nasal. Der Laut wird mit verschlossenem Mund ausgesprochen und tritt über die Nase aus. Der Ort ist bilabial, also mit beiden Lippen. Die Lippen werden beim erzeugen des Lautes zusammengepresst.
               Beim aussprechen von amme bewegt sich die Zunge wenig.
-              Die Art des Konsonanten f ist frikativ. Heißt er wird erzeugt durch ein rauschen. Der Ort des Lautes ist Labiodental, heißt er wird erzeugt mithilfe der Lippen und Zähne. Beim f werden die Lippen zusammengezogen und die Zähne ebenso, dass der Austrittskanal klein, aber nicht verschlossen ist.
+              Die Art des Konsonanten f ist frikativ. Heißt, er wird durch ein Rauschen erzeugt. Der Ort des Lautes ist Labiodental, heißt er wird erzeugt mithilfe der Lippen und Zähne. Beim f werden die Lippen zusammengezogen und die Zähne ebenso, dass der Austrittskanal klein, aber nicht verschlossen ist.
               Auch beim aussprechen von affe wird die Zunge wenig bewegt.
-              Die Art des Konsonanten s ist frikativ und alveolar. Beim erzeugen des s wird im Gegensatz zum bereits beschriebenen l die Zunge nicht komplett an den Zahn geführt.
+              Die Art des Konsonanten s ist frikativ und alveolar. Beim Erzeugen des s wird im Gegensatz zum bereits beschriebenen l die Zunge nicht komplett an den Zahn geführt.
               Beim aussprechen von asse wird die Zunge wieder von hinten tief nach vorne hoch bewegt. Dann aber für den Übergang zum letzten Vokal wieder abgesenkt.
               Die Art des Konsonanten n ist nasal und alveolar. Der Laut strömt aus der Nase und die Zunge drückt sich an den Zahn.
               Beim aussprechen von anne geschieht das gleiche wie bei asse, was wohl daran liegt das beide alveolar sind.
@@ -233,12 +233,13 @@
             </h2>
             <p>
               Bei lad wird der Laut eher hinten erzeugt, und der Mund ist geöffnet. Da die Zunge beim a: im Mundraum liegt, ist eher keine Rundung vorhanden.
-              Bei led wird der Laut eher vorne erzeugt. Die Lippen sind im gezug zum a: kaum geöffnet.
+              Bei led wird der Laut eher vorne erzeugt. Die Lippen sind im Gegensatz zum a: kaum geöffnet.
               Bei lied wird der Laut noch weiter vorne produziert. Die Lippen sind wie beim e: fast geschlossen.
               Bei lod wird der Laut hinten erzeugt und die Lippen bleiben weitestgehend geschlossen.
               Bei lud wird der Laut auch hinten erzeugt und die Lippen bleiben ebenso weitestgehend geschlossen. u: und o: liegen somit nah beieinander.
 
               Man erkennt in den Oszillogramme/Spektrogramme von PRAAT schon Ähnlichkeiten bei den Lauten. Die Form der Formanten ist ähnlich, allerdings ist deren Energie unterschiedlich. David und Stefan haben ähnlich viel Energie bei der Aussprache der Laute verwendet. Marc eher weniger.
+              Siehe 3.2 Abs. 1 für weitere Vergleiche zwischen verschiedenen Sprechern.
             </p>
 
         </section>
