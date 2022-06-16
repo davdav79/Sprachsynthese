@@ -1,0 +1,286 @@
+File type = "ooTextFile"
+Object class = "LPC 1"
+
+xmin = 0 
+xmax = 5.6528125 
+nx = 55 
+dx = 0.1 
+x1 = 0.12640625000000022 
+samplingPeriod = 6.25e-05 
+maxnCoefficients = 1 
+frames []: 
+    frames [1]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.3187939674492342 
+        gain = 0.0026783450714817462 
+    frames [2]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.2273138861433259 
+        gain = 0.3815403889254493 
+    frames [3]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.3075391059450409 
+        gain = 0.05919443825313511 
+    frames [4]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.6243545927946691 
+        gain = 0.08964458600832265 
+    frames [5]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.47446226317467444 
+        gain = 1.058525170595171 
+    frames [6]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5371034051221022 
+        gain = 0.03673254960368312 
+    frames [7]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.46445643089865024 
+        gain = 0.6215780273413747 
+    frames [8]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.48964638947325423 
+        gain = 0.026529761907942904 
+    frames [9]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.528642314798558 
+        gain = 0.22591361938641602 
+    frames [10]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5242753472410702 
+        gain = 0.01966876492136862 
+    frames [11]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.7017032423591094 
+        gain = 0.0012100784178117707 
+    frames [12]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5658657498937711 
+        gain = 0.009304375013466091 
+    frames [13]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.3528733952178632 
+        gain = 0.02071775451715265 
+    frames [14]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5137447148089617 
+        gain = 0.01636158604186848 
+    frames [15]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.23638582972541097 
+        gain = 0.1446987356513577 
+    frames [16]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.31979777023865635 
+        gain = 0.0030197207187885227 
+    frames [17]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.40487654618347685 
+        gain = 0.6817441706313869 
+    frames [18]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.2524321437846901 
+        gain = 0.00035754675036619267 
+    frames [19]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.2976973875003399 
+        gain = 0.013302603087518645 
+    frames [20]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.12271567731748498 
+        gain = 0.05250565488958581 
+    frames [21]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5935718302687393 
+        gain = 0.007197379998253497 
+    frames [22]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.7050785872504529 
+        gain = 0.03271720053516709 
+    frames [23]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.48845502015164244 
+        gain = 0.9771003769369582 
+    frames [24]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.30486753927453497 
+        gain = 0.13082924431454784 
+    frames [25]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5857655336909514 
+        gain = 0.003032175200484343 
+    frames [26]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5696436265388832 
+        gain = 0.001475372120985184 
+    frames [27]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5052766368264484 
+        gain = 0.05334082116816962 
+    frames [28]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.518635364014488 
+        gain = 0.009718321101373694 
+    frames [29]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.24555286459063258 
+        gain = 0.009477394570591885 
+    frames [30]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.09405601118845476 
+        gain = 0.09743197810189565 
+    frames [31]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.48456570569295665 
+        gain = 0.004393886386192749 
+    frames [32]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.2971958923917951 
+        gain = 0.10628829204153603 
+    frames [33]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.31828314192390694 
+        gain = 0.04048361458789385 
+    frames [34]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.53949187721943 
+        gain = 0.006019311590651026 
+    frames [35]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.6381442841851401 
+        gain = 0.25248290737236817 
+    frames [36]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5314004580089561 
+        gain = 0.010291908638540922 
+    frames [37]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.1115587549187029 
+        gain = 0.09202017394833154 
+    frames [38]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = 0.47192836782437286 
+        gain = 0.12407232460458534 
+    frames [39]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.04748599404875434 
+        gain = 0.10769397314893664 
+    frames [40]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.3977678846367606 
+        gain = 0.0044259184886156384 
+    frames [41]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5979276741856813 
+        gain = 0.022760903257562005 
+    frames [42]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5123887365014033 
+        gain = 0.10268957781543644 
+    frames [43]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.4467511682948932 
+        gain = 0.02108989256054167 
+    frames [44]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.43367891867021047 
+        gain = 0.06700884151736063 
+    frames [45]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.666071899440884 
+        gain = 0.0004925764895001631 
+    frames [46]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.9062063075425663 
+        gain = 0.05501435615051531 
+    frames [47]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.021820464261412886 
+        gain = 0.0007808174632717721 
+    frames [48]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.8256228919484537 
+        gain = 0.017966465129984246 
+    frames [49]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.22440514230186093 
+        gain = 0.004801215596720507 
+    frames [50]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.7786905348367906 
+        gain = 0.017859968584634733 
+    frames [51]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.6763824295706288 
+        gain = 0.001108790932116368 
+    frames [52]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.5132428672654432 
+        gain = 0.00011599126161352443 
+    frames [53]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.26220971058420645 
+        gain = 6.910632102811926e-05 
+    frames [54]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.16651324933562206 
+        gain = 5.744885573534295e-05 
+    frames [55]:
+        nCoefficients = 1 
+        a []: 
+            a [1] = -0.3511051039042865 
+        gain = 6.376297603678036e-05 
