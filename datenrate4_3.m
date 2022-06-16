@@ -15,6 +15,8 @@ for i=1:length(window_lengths)
 endfor
 
 %{
+Original PCM: 16 * 16000 = 256.000 Bit/s
+
 1/25: 1280 Bit/s
 6/25: 4480 Bit/s
 10/25: 7040 Bit/s
