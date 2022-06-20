@@ -29,14 +29,140 @@
     <iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
                 <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
                 folgenden.</p>
-       </iframe>
+    </iframe>
     <h2>&Uuml;bung 4</h2>
     <article>
         <header>
             <h1>Aufgabe 4.2</h1>
         </header>
         <section>
-            <p></p>
+            <p>Als erstes lesen wir mit [Read] in PRAAT unsere Sprachdatei ein. Dann wählen wir
+                "Formants&LPC->To LPC (autocorrelation)". Die anderen Verfahren, die PRAAT noch anbietet,
+                unterscheiden sich nur geringfügig in der Methode der Berechnung der Filter-Koeffizienten. Im
+                Einstelldialog sind besonders die Punkte "Prediction Order" (Ordnung des Filters) und
+                "Analysis width" (Framebreite bei der Analyse) von Interesse. Diese wollen wir in dieser
+                Aufgabe variieren. Zusätzlich zu den von PRAAT angebotenen Standardwerten von
+                Order=16/Analysis Width=25ms (kurz: 16/25) werden wir Analysen bei Ordnungen von 10, 6
+                und 1 durchführen, sowie Framelängen von 50 und 100 ms untersuchen. "Time step" (die
+                "Vorschubbreite" der Analyse) setzen wir auf denselben Wert wie "Analysis width", d.h. wir
+                erlauben kein Überlappen von benachbarten Frames.
+                Um die verschiedenen Varianten nicht zu verwechseln, geben wir den einzelnen LPC-Objekten
+                mit 'Rename' entsprechende Namen.</p>
+            <table>
+                <tr>
+                    <h2>Verwendeter Satz</h2>
+                </tr>
+                <tr>
+                    <th>David Satz</th>
+                    <th>Marc Satz</th>
+                    <th>Stefan Satz</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/Satz_David.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_2/Satz_Marc.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/Satz_Stefan.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th>David LPC</th>
+                    <th>Marc LPC</th>
+                    <th>Stefan LPC</th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_16_25.LPC">16/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/16_25.LPC">16/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_16_25ms.LPC">16/25</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_16_50.LPC">16/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/16_50.LPC">16/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_16_50ms.LPC">16/50</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_16_100.LPC">16/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/16_100.LPC">16/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_16_100ms.LPC">16/100</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_10_25.LPC">10/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/10_25.LPC">10/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_10_25ms.LPC">10/25</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_10_50.LPC">10/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/10_50.LPC">10/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_10_50ms.LPC">10/50</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_10_100.LPC">10/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/10_100.LPC">10/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_10_100ms.LPC">10/100</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_06_25.LPC">06/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/6_25.LPC">06/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_6_25ms.LPC">06/25</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_06_50.LPC">06/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/6_50.LPC">06/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_6_50ms.LPC">06/50</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_06_100.LPC">06/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/6_100.LPC">06/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_6_100ms.LPC">06/100</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_01_25.LPC">01/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/1_25.LPC">01/25</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_1_25ms.LPC">01/25</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_01_50.LPC">01/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/1_50.LPC">01/50</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_1_50ms.LPC">01/50</a></th>
+                </tr>
+                <tr>
+                    <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_01_100.LPC">01/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/marc/4_2/1_100.LPC">01/100</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/stefan/4_2/Satz_Stefan_1_100ms.LPC">01/100</a></th>
+                </tr>
+            </table>
+            <p>Nachdem die verschiedenen LPC-Objekte kreiert wurden, führen wir zunächst eine inverse
+                Filterung des Sprachsignals durch, mit der wir theoretisch die "Quelle" zurückgewinnen
+                (Sound und LPC (16/25) gemeinsam anwählen, "Filter (inverse)"). Das entstehende Signal,
+                das auch als "Residual"-Signal bezeichnet wird, betrachten wir im Edit-Fenster. Wie
+                unterscheiden sich die Spektren vom Original, wie ist die Restverständlichkeit der
+                ursprünglichen Sprache? (Spektrogramme von Original und Residual-Signal ins Protokoll) Nun
+                gewinnen wir das ursprüngliche Signal wieder zurück (Rekonstruktion), indem wir das
+                Residuum mit dem dazugehörigen LPC-Objekt (16/25) filtern (Residuum und LPC gemeinsam
+                anwählen, "Filter", "Use LPC Gain" nicht ankreuzen!).</p>
+            <tr>
+            <table>
+            
+                    <th>David Residuum</th>
+                    <th>Marc Residuum</th>
+                    <th>Stefan Residuum</th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_2/ResidumVsOrig.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_2/4_2 Marc original-resual.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_2/4_2_Stefan_Spektrum_Orig_Residual.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp; Residuum </th>
+                    <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp;Residuum  </th>
+                    <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp; Residuum </th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_2/Satz_David_16_25_inv_filter.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_2/Residual_16_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_2/Satz_Stefan_16_25ms_InverseFilter.wav" type="audio/wav"></audio></th>
+                </tr>
+            </table>
+            <p>Das Residuum verliert seine Ausprägungen in den Frequenzen. Man kann erahnen, was gesagt wurde aber es wird stark übersteuert. Die Friktiven Laute wie F und S höhrt man hierbei besonders heraus.
+                Desweiteren Klingt das Residuum wesentlich dumpfer und metallischer als das Original.
+            </p>
         </section>
     </article>
     <article>
@@ -45,7 +171,205 @@
         </header>
 
         <section>
-            <p></p>
+            <p>Das Residual-Signal dient uns jetzt zum Testen der anderen LPC-Objekte mit den
+verschlechterten Parametern. Auch hier wählen wir das Residuum und das gewünschte LPC-
+Objekt an und filtern wieder. Vergleiche die Qualität der einzelnen Varianten mit dem Original!
+Wie unterscheiden sich die Beispiele, bei denen die Filter-Ordnung variiert wurde, wie solche,
+bei denen die Framebreite variiert wurde? Bei welcher Kombination ist die
+Sprachverständlichkeit nicht mehr akzeptabel?</p>
+            <table>
+                <tr>
+                    <th>David Rekonstruktion 16/25</th>
+                    <th>Marc Rekonstruktion 16/25</th>
+                    <th>Stefan Rekonstruktion 16/25</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_16_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/16_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_16_25ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/16_25.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/16_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_16_25.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 16/50</th>
+                    <th>Marc Rekonstruktion 16/50</th>
+                    <th>Stefan Rekonstruktion 16/50</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_16_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/16_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_16_50ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/16_50.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/16_50.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_16_50.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 16/100</th>
+                    <th>Marc Rekonstruktion 16/100</th>
+                    <th>Stefan Rekonstruktion 16/100</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_16_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/16_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_16_100ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/16_100.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/16_100.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_16_100.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 10/25</th>
+                    <th>Marc Rekonstruktion 10/25</th>
+                    <th>Stefan Rekonstruktion 10/25</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_10_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/10_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_10_25ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/10_25.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/10_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_10_25.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 10/50</th>
+                    <th>Marc Rekonstruktion 10/50</th>
+                    <th>Stefan Rekonstruktion 10/50</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_10_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/10_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_10_50ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/10_50.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/10_50.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_10_50.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 10/100</th>
+                    <th>Marc Rekonstruktion 10/100</th>
+                    <th>Stefan Rekonstruktion 10/100</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_10_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/10_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_10_100ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/10_100.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/10_100.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_10_100.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 06/25</th>
+                    <th>Marc Rekonstruktion 06/25</th>
+                    <th>Stefan Rekonstruktion 06/25</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_06_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/6_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_6_25ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/06_25.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/6_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_6_25.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 06/50</th>
+                    <th>Marc Rekonstruktion 06/50</th>
+                    <th>Stefan Rekonstruktion 06/50</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_06_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/6_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_6_50ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/06_50.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/6_50.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_6_50.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 06/100</th>
+                    <th>Marc Rekonstruktion 06/100</th>
+                    <th>Stefan Rekonstruktion 06/100</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_06_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/6_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_6_100ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/06_100.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/6_100.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_6_100.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 01/25</th>
+                    <th>Marc Rekonstruktion 01/25</th>
+                    <th>Stefan Rekonstruktion 01/25</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_01_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/1_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_1_25ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/01_25.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/1_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_1_25.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 01/50</th>
+                    <th>Marc Rekonstruktion 01/50</th>
+                    <th>Stefan Rekonstruktion 01/50</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_01_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/1_50.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_1_50ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/01_50.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/1_50.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_1_50.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>David Rekonstruktion 01/100</th>
+                    <th>Marc Rekonstruktion 01/100</th>
+                    <th>Stefan Rekonstruktion 01/100</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_3/Satz_David_01_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_3/1_100.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_3/Satz_Stefan_1_100ms_Filter.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_3/01_100.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_3/1_100.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_3/Stefan_1_100.JPG" width="400" height="200"></th>
+                </tr>
+            </table>
+            <p>Wenn man die Framebreite verlängert, verschwimmt die Sprache ineinander. Es klingt als würde es ein leichtes echo geben. Je mehr man die Filter-Ordnung verschlechtert umso schlechter verständlich wird der Satz.
+                Für uns ist die Sprachqualität nach einer Filter-Ordnung von 10 oder einer Framelänge von 25 nicht mehr akzeptabel aber das liegt von den Ansprüchen ab und wofür es verwendet werden soll. Wenn es nur darum geht die Nachricht zu übermitteln wären alle akzeptabel für einen Anruft die eben genannten.
+                Für ein Höhrbuch nichtmal 16/25. 
+            </p>
+
+            <p>Für die 12 Qualitäten (also Filter-Ordnungen 16, 10, 6, 1 kombiniert mit Framebreiten 25, 50
+                und 100ms) berechnen wir die Datenraten. Dazu machen wir uns Folgendes klar: Übertragen
+                werden müssen mindestens je Analyseblock (also z.B. je 25ms) die Koeffizienten (Zahl
+                entspricht der Filterordnung) und die Grundfrequenz f0. Setze hier jeweils pro Zahlenwert
+                16bit an. Vergleiche diese Datenrate mit der ursprünglichen PCM-Datenrate der Sprachdatei.</p>
+                <table><p style="color:red; font-size:50px;">TODO HIER MUSS NOCH DIE BERECHNUNG REIN</p></table>
         </section>
     </article>
     <article>
@@ -54,7 +378,78 @@
         </header>
 
         <section>
-            <p></p>
+            <p>Nun wollen wir die Anregung (Quelle) verändern. Dafür habe ich zwei Signale bereitgestellt,
+                weißes Rauschen und einen 100Hz-Pulse Train, einen obertonreiches Signal mit
+                Grundfrequenz 100Hz
+                •
+                Weißes Rauschen
+                •
+                Pulse Train
+                Wenn wir das Rauschen mit dem LPC-Objekt filtern (jetzt "Use LPC Gain" anwählen),
+                bekommen wir so etwas wie Flüstersprache, beim Pulse Train eine Roboterstimme.
+                Abschließend werden wir auch noch eine Musikdatei als Anregung benutzen, was einen
+                Vocodereffekt bewirken sollte. Am besten eignen sich hier flächige, eher statische Sounds wie
+                Synthesizerakkorde, da der Rhythmus vom Sprachsignal kommen soll.</p>
+            <table>
+                <tr>
+                    <th>David Weißes Rauschen</th>
+                    <th>Marc Weißes Rauschen</th>
+                    <th>Stefan Weißes Rauschen</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_4/Satz_David_16_25_whitenoise.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_4/whitenoise_16_25.png" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_4/Stefan_Whitenoise.JPG" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_4/whitenoise.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_4/whitenoise_16_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_4/Stefan_Whitenoise.JPG" width="400" height="200"></th>
+                </tr>
+                <th>
+                    <p>Verwendete Whitenoisedatei</p>
+                </th>
+                <th><audio controls><source src="./Uebung4/whitenoise.wav" type="audio/wav"></audio></th></tr>
+                <tr>
+                    <th>David Pulse Train</th>
+                    <th>Marc Pulse Train</th>
+                    <th>Stefan Pulse Train</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_4/Satz_David_16_25_pulsetrain.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_4/pulsetrain_16_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_4/Stefan_Pulsetrain.JPG" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_4/pulsetrain.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_4/pulsetrain_16_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_4/Stefan_Pulsetrain.JPG" width="400" height="200"></th>
+                </tr>
+                <th>
+                    <p>Verwendete Pulse Train Datei</p>
+                </th>
+                <th><audio controls><source src="./Uebung4/pulsetrain.wav" type="audio/wav"></audio></th></tr>
+                <tr>
+                    <th>David Musikdatei</th>
+                    <th>Marc Musikdatei</th>
+                    <th>Stefan Musikdatei</th>
+                </tr>
+                <tr>
+                    <th><audio controls><source src="./Uebung4/david/4_4/Satz_David_16_25_synthwave.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/marc/4_4/synth_16_25.wav" type="audio/wav"></audio></th>
+                    <th><audio controls><source src="./Uebung4/stefan/4_4/Satz_Stefan_16_25ms_music.wav" type="audio/wav"></audio></th>
+                </tr>
+                <tr>
+                    <th><img src="./Uebung4/david/4_4/synthwave.JPG" width="400" height="200"></th>
+                    <th><img src="./Uebung4/marc/4_4/synth_16_25.png" width="400" height="200"></th>
+                    <th><img src="./Uebung4/stefan/4_4/Stefan_Music.JPG" width="400" height="200"></th>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Verwendete Musiksatei</p>
+                    </th>
+                    <th><audio controls><source src="./Uebung4/VHS_DREAMS_-_Vice_Point__64_kbps_.wav" type="audio/wav"></audio></th></tr>
+            </table>
 
         </section>
 
