@@ -5,14 +5,16 @@ close all
 window_lengths = [25,50,100];
 prediction_orders = [1,6,10,16];
 
-Datarates = [];
+Datarates = zeros(1,12);
 
 for i=1:length(window_lengths)
   for j=1:length(prediction_orders)
     value = (1/(window_lengths(i)/1000))* (prediction_orders(j) + 1) * 16;
     Datarates = [Datarates value];
-  endfor
-endfor
+    display = [num2str(prediction_orders(j)) '/' num2str(window_lengths(i))  ': ' num2str(value) ' Bit/s'];
+    disp(display)
+  end
+end
 
 %{
 Original PCM: 16 * 16000 = 256.000 Bit/s
