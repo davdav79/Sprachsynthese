@@ -140,7 +140,7 @@
             <tr>
             <table>
                 <tr>
-                    <h2>Oszillogramme & Spektrogramme vom Original und Residuum</h2>
+                    <h2>Oszillogramme & Spektrogramme von Original und Residuum</h2>
                 </tr>
                     <th>David:</th>
                     <th>Marc:</th>
@@ -167,8 +167,18 @@
                     <th><audio controls><source src="./Uebung4/stefan/4_2/Satz_Stefan_16_25ms_InverseFilter.wav" type="audio/wav"></audio></th>
                 </tr>
             </table>
-            <p>Das Residuum verliert seine Ausprägungen in den Frequenzen. Man kann erahnen, was gesagt wurde aber es wird stark übersteuert. Die Friktiven Laute wie F und S hört man hierbei besonders heraus.
-                Des Weiteren klingt das Residuum wesentlich dumpfer und metallischer als das Original.
+            <p>Die Residuen klingen verrauschter als die Originale. Dies ist auch deutlich in dem Spektrogrammen, wo nun
+              keine Formanten mehr sichtbar sind, erkennbar. Man kann erahnen was gesagt wurde, es hört sich aber stark
+              übersteuert und eben rauschend an (das wir den Satz erahnen können liegt wahrscheinlich daran, das wir das
+              Original kennen und somit voreingenommen sind). Die Friktiven Laute wie F und S hört man hierbei besonders heraus.
+              Des Weiteren klingt das Residuum wesentlich dumpfer und metallischer als das Original.
+              <br>
+              Die Oszillogramme sehen unterschiedlich aus, jedoch unterscheiden sich die Differenzen stark von Sprecher zu Sprecher.
+              Tendenziell ist das Oszillogramm bei David wesentlich dichter geworden. Bei Stefan sieht man ansatzweise den gleichen Trend,
+              jedoch sind die Pausen noch klar erkennbar. Bei Marc gibt es zur Mitte des Oszillogramms des Residuums einen starken Ausschlag.
+              Generell sehen die Oszilogramme der Residuen mehr aufgefächert als die der Originale aus.
+              <br>
+              Bei den Spektrogrammen gibt es einen klaren Trend. Die Töne der Residuen haben wesentlich homogenere Spektren.
             </p>
         </section>
     </article>
@@ -366,16 +376,22 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
                     <th><img src="./Uebung4/stefan/4_3/Stefan_1_100.JPG" width="400" height="200"></th>
                 </tr>
             </table>
-            <p>Wenn man die Framebreite verlängert, verschwimmt die Sprache ineinander. Es klingt als würde es ein leichtes echo geben. Desweiteren verringert sich der Pegel. Am besten ist das bei Marc's Aufnahme zu beobachten. Je mehr man die Filter-Ordnung verschlechtert umso schlechter verständlich wird der Satz.
-                Für uns ist die Sprachqualität nach einer Filter-Ordnung von 10 oder einer Framelänge von 25 nicht mehr akzeptabel, aber dass hängt von den Ansprüchen ab und wofür es verwendet werden soll. Wenn es nur darum geht die Nachricht zu übermitteln wären alle akzeptabel, für einen Anruf die eben genannten.
-                Für ein Höhrbuch nichtmal 16/25.
+            <p>Wenn man die Framebreite verlängert, verschwimmt die Sprache ineinander.
+                Es klingt als würde es ein leichtes Echo geben. Bei Marc's 16/100 Rekontruktion ist
+                dies gut zu hören. Je mehr man die Filter-Ordnung verschlechtert umso schlechter
+                verständlich wird der Satz. Die Qualität nähert sich mit kleinrr werdenden Filterordnung dem Residuum an.
+                Die Restverständlichkeit hängt stark von der Filterordnung ab. Das Echo ist zwar störend, verringert die
+                Restverständlichkeit aber nicht signifikant.
+                Für uns ist die Sprachqualität nach einer Filter-Ordnung von 10 nicht mehr akzeptabel.
+                In der Praxis hängt die Akzeptanz des Signales von der Anwendung ab.
+                Für einen Anruf wäre zB. die 10/100 Rekonstruktion noch akzeptabel, für Musik kommt nur die 16/25 Rekonstruktion in Frage.
             </p>
             <h2>Datenraten</h2>
             <p>Für die 12 Qualitäten (also Filter-Ordnungen 16, 10, 6, 1 kombiniert mit Framebreiten 25, 50
                 und 100ms) berechnen wir die Datenraten. Dazu machen wir uns Folgendes klar: Übertragen
                 werden müssen mindestens je Analyseblock (also z.B. je 25ms) die Koeffizienten (Zahl
-                entspricht der Filterordnung) und die Grundfrequenz f0. Setze hier jeweils pro Zahlenwert
-                16 Bit an. Vergleiche diese Datenrate mit der ursprünglichen PCM-Datenrate der Sprachdatei.</p>
+                entspricht der Filterordnung) und die Grundfrequenz f0. Setze hier jeweils pro Zahlenwert 16bit an.
+                Vergleiche diese Datenrate mit der ursprünglichen PCM-Datenrate der Sprachdatei.</p>
                 <p>Original PCM: 16 * 16000 = 256.000 Bit/s</p>
                 <table>
                     <tr>
@@ -398,9 +414,9 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
                         <th>1/50: 640 Bit/s</th>
                         <th>1/100: 320 Bit/s</th>
                     </tr>
-                    <th><a style="color:blue;" href="./Uebung4/datenrate4_3.m">Matlab-Skript zur berechnung</a></th>
+                    <th><a style="color:blue;" href="./Uebung4/datenrate4_3.m">Matlab-Skript zur Berechnung</a></th>
                 </table>
-                <p>Die ursprüngliche PCM-Datenrate betrug 256.000 Bit/s. Mit 16/25 unserer höchsten Datenrate haben wir nur 10.880 Bit/s, was einer 23,5 fache Verringerung entspricht.</p>
+                <p>Die ursprüngliche PCM-Datenrate betrug 256.000 Bit/s. Mit 16/25 unserer höchsten Datenrate haben wir nur 10.880 Bit/s, was einer Kompressionsrate von 1:23,5 entspricht.</p>
         </section>
     </article>
     <article>
@@ -475,6 +491,15 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
                 </tr>
 
             </table>
+            <p>
+              Die Rekonstruktionen mit dem weißen Rauschen klingt ähnlich einer Person, die heiser ist.
+              Die Rekontruktion mit der Pulse Train Datei hat Ähnlichkeiten mit der sich ergebenen Stimme
+              durch das nutzen einer Sprechhilfe. Da hierbei statt des Kehlkopfes eine konstante Frequenz, wie
+              bei unserer Pulse Train Datei genutzt wird, scheinen diese Parallelen plausibel.
+              Bei der Rekonstruktion mit der Musikdatei ist gut der Rhythmus hörbar.
+              <br>
+              Die Spektrogramme sind bei der Rekonstruktion mit dem Pulse Train Signal weniger homogen als bei den anderen Signalen.
+            </p>
 
         </section>
 
