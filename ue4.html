@@ -50,12 +50,12 @@
                 mit 'Rename' entsprechende Namen.</p>
             <table>
                 <tr>
-                    <h2>Verwendeter Satz</h2>
+                    <h2>Verwendeter Satz: "Schreibe ein Matlab-Skript zur Berechnung eines Histogramms für eine Sprachdatei."</h2>
                 </tr>
                 <tr>
-                    <th>David Satz</th>
-                    <th>Marc Satz</th>
-                    <th>Stefan Satz</th>
+                    <th>David Original:</th>
+                    <th>Marc Original:</th>
+                    <th>Stefan Original:</th>
                 </tr>
                 <tr>
                     <th><audio controls><source src="./Uebung4/david/Satz_David.wav" type="audio/wav"></audio></th>
@@ -63,9 +63,9 @@
                     <th><audio controls><source src="./Uebung4/stefan/Satz_Stefan.wav" type="audio/wav"></audio></th>
                 </tr>
                 <tr>
-                    <th>David LPC</th>
-                    <th>Marc LPC</th>
-                    <th>Stefan LPC</th>
+                    <th>David LPC Objekte:</th>
+                    <th>Marc LPC Objekte:</th>
+                    <th>Stefan LPC Objekte:</th>
                 </tr>
                 <tr>
                     <th><a style="color:blue;" href="./Uebung4/david/4_2/Satz_David_16_25.LPC">16/25</a></th>
@@ -139,10 +139,12 @@
                 anwählen, "Filter", "Use LPC Gain" nicht ankreuzen!).</p>
             <tr>
             <table>
-            
-                    <th>David Residuum</th>
-                    <th>Marc Residuum</th>
-                    <th>Stefan Residuum</th>
+                <tr>
+                    <h2>Oszillogramme & Spektrogramme vom Original und Residuum</h2>
+                </tr>
+                    <th>David:</th>
+                    <th>Marc:</th>
+                    <th>Stefan:</th>
                 </tr>
                 <tr>
                     <th><img src="./Uebung4/david/4_2/ResidumVsOrig.JPG" width="400" height="200"></th>
@@ -153,6 +155,11 @@
                     <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp; Residuum </th>
                     <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp;Residuum  </th>
                     <th>Original  &emsp;&emsp;&emsp;&emsp;&emsp; &emsp; &emsp; Residuum </th>
+                </tr>
+                </tr>
+                    <th>Wave-Datei des Residuums David:</th>
+                    <th>Wave-Datei des Residuums Marc:</th>
+                    <th>Wave-Datei des Residuums Stefan:</th>
                 </tr>
                 <tr>
                     <th><audio controls><source src="./Uebung4/david/4_2/Satz_David_16_25_inv_filter.wav" type="audio/wav"></audio></th>
@@ -361,9 +368,9 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
             </table>
             <p>Wenn man die Framebreite verlängert, verschwimmt die Sprache ineinander. Es klingt als würde es ein leichtes echo geben. Desweiteren verringert sich der Pegel. Am besten ist das bei Marc's Aufnahme zu beobachten. Je mehr man die Filter-Ordnung verschlechtert umso schlechter verständlich wird der Satz.
                 Für uns ist die Sprachqualität nach einer Filter-Ordnung von 10 oder einer Framelänge von 25 nicht mehr akzeptabel, aber dass hängt von den Ansprüchen ab und wofür es verwendet werden soll. Wenn es nur darum geht die Nachricht zu übermitteln wären alle akzeptabel, für einen Anruf die eben genannten.
-                Für ein Höhrbuch nichtmal 16/25. 
+                Für ein Höhrbuch nichtmal 16/25.
             </p>
-
+            <h2>Datenraten</h2>
             <p>Für die 12 Qualitäten (also Filter-Ordnungen 16, 10, 6, 1 kombiniert mit Framebreiten 25, 50
                 und 100ms) berechnen wir die Datenraten. Dazu machen wir uns Folgendes klar: Übertragen
                 werden müssen mindestens je Analyseblock (also z.B. je 25ms) die Koeffizienten (Zahl
@@ -404,11 +411,7 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
         <section>
             <p>Nun wollen wir die Anregung (Quelle) verändern. Dafür habe ich zwei Signale bereitgestellt,
                 weißes Rauschen und einen 100Hz-Pulse Train, einen obertonreiches Signal mit
-                Grundfrequenz 100Hz
-                •
-                Weißes Rauschen
-                •
-                Pulse Train
+                Grundfrequenz 100Hz.
                 Wenn wir das Rauschen mit dem LPC-Objekt filtern (jetzt "Use LPC Gain" anwählen),
                 bekommen wir so etwas wie Flüstersprache, beim Pulse Train eine Roboterstimme.
                 Abschließend werden wir auch noch eine Musikdatei als Anregung benutzen, was einen
@@ -461,16 +464,16 @@ Sprachverständlichkeit nicht mehr akzeptabel?</p>
                     <th><img src="./Uebung4/stefan/4_4/Stefan_Music.JPG" width="400" height="200"></th>
                 </tr>
                 <tr>
-                    <th><p>Verwendete Pulse Train Datei</p></th>
-                    <th><p>Verwendete Whitenoisedatei</p></th>
-                    <th><p>Verwendete Musiksatei</p></th>
+                    <th><p>Verwendete Whitenoise-Datei:</p></th>
+                    <th><p>Verwendete Pulse Train-Datei:</p></th>
+                    <th><p>Verwendete Musikdatei:</p></th>
                 </tr>
                 <tr>
                     <th><audio controls><source src="./Uebung4/whitenoise.wav" type="audio/wav"></audio></th>
                     <th><audio controls><source src="./Uebung4/pulsetrain.wav" type="audio/wav"></audio></th>
                     <th><audio controls><source src="./Uebung4/VHS_DREAMS_-_Vice_Point__64_kbps_.wav" type="audio/wav"></audio></th>
                 </tr>
-                    
+
             </table>
 
         </section>
